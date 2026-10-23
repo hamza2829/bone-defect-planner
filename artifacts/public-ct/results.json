@@ -1,0 +1,152 @@
+{
+  "source": "data\\downloads\\CT-brain.nrrd",
+  "disclaimer": "Learning prototype, no ground truth or clinical accuracy claim.",
+  "segmentation_volume_mm3": 553806.6879452572,
+  "mesh": {
+    "volume_mm3": 552881.9563433916,
+    "surface_area_mm2": 255661.85523450276,
+    "watertight": true,
+    "valid_volume": true,
+    "vertices": 703915,
+    "faces": 1411394
+  },
+  "defect_volume_mm3": 585.7701337874048,
+  "defect_bbox": {
+    "min_index": [
+      410,
+      204,
+      38
+    ],
+    "max_index_exclusive": [
+      424,
+      229,
+      43
+    ],
+    "lower_mm": [
+      175.957236,
+      87.44150799999998,
+      94.79999542236335
+    ],
+    "upper_mm": [
+      181.972868,
+      98.183708,
+      107.43999481201179
+    ],
+    "size_mm": [
+      6.015632,
+      10.742199999999999,
+      12.639999389648446
+    ]
+  },
+  "modules": {
+    "coverage_pct": 88.84462151394422,
+    "overshoot_pct": 31.314741035856574,
+    "covered_mm3": 520.4252583051446,
+    "overshoot_mm3": 183.43240046091643,
+    "union_volume_mm3": 703.8576587660609,
+    "overlapping_modules_mm3": 444.34515327937004,
+    "blocks": [
+      {
+        "id": "cylinder-6",
+        "shape": "cylinder",
+        "center_mm": [
+          178.96505200000001,
+          92.81260799999998,
+          103.64799499511726
+        ],
+        "orientation": "y",
+        "dimensions_mm": [
+          6,
+          8,
+          6
+        ],
+        "minimum_thickness_mm": 6.0
+      },
+      {
+        "id": "box-10",
+        "shape": "cuboid",
+        "center_mm": [
+          178.96505200000001,
+          92.81260799999998,
+          98.59199523925788
+        ],
+        "orientation": "xyz",
+        "dimensions_mm": [
+          6,
+          10,
+          8
+        ],
+        "minimum_thickness_mm": 6.0
+      },
+      {
+        "id": "cylinder-6",
+        "shape": "cylinder",
+        "center_mm": [
+          178.96505200000001,
+          94.53135999999999,
+          103.64799499511726
+        ],
+        "orientation": "z",
+        "dimensions_mm": [
+          6,
+          6,
+          8
+        ],
+        "minimum_thickness_mm": 6.0
+      },
+      {
+        "id": "cylinder-6",
+        "shape": "cylinder",
+        "center_mm": [
+          178.96505200000001,
+          91.09385599999999,
+          103.64799499511726
+        ],
+        "orientation": "z",
+        "dimensions_mm": [
+          6,
+          6,
+          8
+        ],
+        "minimum_thickness_mm": 6.0
+      }
+    ],
+    "rejected_thin": [
+      {
+        "id": "thin-plate",
+        "thickness_mm": 2.0,
+        "reason": "below minimum solid-module thickness"
+      }
+    ],
+    "minimum_thickness_rule_mm": 3.0,
+    "thickness_check": "pass",
+    "fit_quality": "poor fit",
+    "objective": "greedy new covered voxels minus new overshoot voxels; not a global optimum",
+    "bone_overlap_mm3": 0.0
+  },
+  "module_coordinate_frame": "image axes in mm; world = origin + direction @ local",
+  "defect_kind": "Artificial removal of a surface ROI, not a patient diagnosis or annotation",
+  "threshold_intensity_units": "Stored CT intensities; HU calibration not independently established",
+  "origin_lps_mm": [
+    104.99526085155622,
+    73.98130928772783,
+    -87.83400008611339
+  ],
+  "direction": [
+    [
+      -0.9994656349929412,
+      -0.03009933774863062,
+      -0.012746542089959807
+    ],
+    [
+      0.02782200602122989,
+      -0.9880490116100944,
+      0.15160833300735807
+    ],
+    [
+      -0.017157518734126593,
+      0.15117268444864362,
+      0.9883584567491083
+    ]
+  ]
+}

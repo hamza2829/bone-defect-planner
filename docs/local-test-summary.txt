@@ -1,0 +1,14 @@
+Command: .venv/Scripts/python.exe -m pytest -q --basetemp .pytest-temp-verified
+Platform: Windows, Python 3.12.14
+Result: 21 passed, 64 warnings in 5.17 seconds
+Warnings: upstream scikit-image use of deprecated NumPy shape assignment
+pip check: No broken requirements found.
+
+Final phantom run:
+nominal: Dice=0.9998, bone volume error=0.05%, coverage=90.36%, overshoot=3.56%
+low_contrast: Dice=0.9361, bone volume error=8.74%, coverage=90.36%, overshoot=3.56%
+thin_defect: Dice=0.9999, bone volume error=0.01%, coverage=72.63%, overshoot=40.35%
+
+Optional public CT download: 16,366,792 bytes, published SHA256 verified.
+Optional public CT demonstration: executed, no ground-truth accuracy claim.
+GitHub Actions: configured, no remote run confirmed.

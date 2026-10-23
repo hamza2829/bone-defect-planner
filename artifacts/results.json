@@ -1,0 +1,417 @@
+{
+  "disclaimer": "Learning prototype. Not medical software. No real biomechanical simulation.",
+  "units": "mm, mm2, mm3; ndarray axis order xyz; voxel-centre coordinates",
+  "cases": [
+    {
+      "case": "nominal",
+      "seed": 7,
+      "shape_xyz": [
+        80,
+        80,
+        64
+      ],
+      "spacing_mm": [
+        0.6000000238418579,
+        0.6000000238418579,
+        1.0
+      ],
+      "threshold": 400,
+      "closing_radius_mm": 0.8,
+      "segmentation_dice": 0.9997512580601956,
+      "true_bone_volume_mm3": 18810.00149488452,
+      "segmented_bone_volume_mm3": 18819.361495628385,
+      "bone_volume_error_pct": 0.049760765550236064,
+      "intact_digital_volume_mm3": 19699.20156555179,
+      "analytic_intact_cylinder_volume_mm3": 19905.13105314493,
+      "defect_volume_mm3": 889.2000706672683,
+      "defect_bbox": {
+        "min_index": [
+          53,
+          30,
+          25
+        ],
+        "max_index_exclusive": [
+          63,
+          50,
+          38
+        ],
+        "lower_mm": [
+          31.50000125169754,
+          17.70000070333481,
+          24.5
+        ],
+        "upper_mm": [
+          37.50000149011612,
+          29.700001180171967,
+          37.5
+        ],
+        "size_mm": [
+          6.000000238418579,
+          12.000000476837158,
+          13.0
+        ]
+      },
+      "bone_mesh": {
+        "volume_mm3": 18798.065293732365,
+        "surface_area_mm2": 7703.4503752505825,
+        "watertight": true,
+        "valid_volume": true,
+        "vertices": 16376,
+        "faces": 32756
+      },
+      "defect_mesh": {
+        "volume_mm3": 882.0602198505172,
+        "surface_area_mm2": 562.2491191247436,
+        "watertight": true,
+        "valid_volume": true,
+        "vertices": 1160,
+        "faces": 2316
+      },
+      "modules": {
+        "coverage_pct": 90.36437246963563,
+        "overshoot_pct": 3.562753036437247,
+        "covered_mm3": 803.5200638580335,
+        "overshoot_mm3": 31.680002517700245,
+        "union_volume_mm3": 835.2000663757337,
+        "overlapping_modules_mm3": 561.6000446319589,
+        "blocks": [
+          {
+            "id": "box-10",
+            "shape": "cuboid",
+            "center_mm": [
+              34.50000137090683,
+              23.700000941753387,
+              31.0
+            ],
+            "orientation": "xyz",
+            "dimensions_mm": [
+              6,
+              8,
+              10
+            ],
+            "minimum_thickness_mm": 6.0
+          },
+          {
+            "id": "box-10",
+            "shape": "cuboid",
+            "center_mm": [
+              34.50000137090683,
+              23.700000941753387,
+              34.0
+            ],
+            "orientation": "xyz",
+            "dimensions_mm": [
+              6,
+              10,
+              8
+            ],
+            "minimum_thickness_mm": 6.0
+          },
+          {
+            "id": "cube-6",
+            "shape": "cuboid",
+            "center_mm": [
+              34.50000137090683,
+              20.850000828504562,
+              28.0
+            ],
+            "orientation": "xyz",
+            "dimensions_mm": [
+              6,
+              6,
+              6
+            ],
+            "minimum_thickness_mm": 6.0
+          },
+          {
+            "id": "cube-6",
+            "shape": "cuboid",
+            "center_mm": [
+              34.50000137090683,
+              26.550001055002213,
+              28.0
+            ],
+            "orientation": "xyz",
+            "dimensions_mm": [
+              6,
+              6,
+              6
+            ],
+            "minimum_thickness_mm": 6.0
+          }
+        ],
+        "rejected_thin": [
+          {
+            "id": "thin-plate",
+            "thickness_mm": 2.0,
+            "reason": "below minimum solid-module thickness"
+          }
+        ],
+        "minimum_thickness_rule_mm": 3.0,
+        "thickness_check": "pass",
+        "fit_quality": "acceptable demo fit",
+        "objective": "greedy new covered voxels minus new overshoot voxels; not a global optimum",
+        "bone_overlap_mm3": 0.0
+      },
+      "defect_mesh_volume_error_pct": 0.8029521198073236
+    },
+    {
+      "case": "low_contrast",
+      "seed": 7,
+      "shape_xyz": [
+        80,
+        80,
+        64
+      ],
+      "spacing_mm": [
+        0.6000000238418579,
+        0.6000000238418579,
+        1.0
+      ],
+      "threshold": 400,
+      "closing_radius_mm": 0.8,
+      "segmentation_dice": 0.9360978245642124,
+      "true_bone_volume_mm3": 18810.00149488452,
+      "segmented_bone_volume_mm3": 17166.24136425021,
+      "bone_volume_error_pct": 8.73875598086124,
+      "intact_digital_volume_mm3": 19699.20156555179,
+      "analytic_intact_cylinder_volume_mm3": 19905.13105314493,
+      "defect_volume_mm3": 889.2000706672683,
+      "defect_bbox": {
+        "min_index": [
+          53,
+          30,
+          25
+        ],
+        "max_index_exclusive": [
+          63,
+          50,
+          38
+        ],
+        "lower_mm": [
+          31.50000125169754,
+          17.70000070333481,
+          24.5
+        ],
+        "upper_mm": [
+          37.50000149011612,
+          29.700001180171967,
+          37.5
+        ],
+        "size_mm": [
+          6.000000238418579,
+          12.000000476837158,
+          13.0
+        ]
+      },
+      "bone_mesh": {
+        "volume_mm3": 17355.875032763972,
+        "surface_area_mm2": 11962.536973921942,
+        "watertight": true,
+        "valid_volume": true,
+        "vertices": 33868,
+        "faces": 67696
+      },
+      "defect_mesh": {
+        "volume_mm3": 882.0602198505172,
+        "surface_area_mm2": 562.2491191247436,
+        "watertight": true,
+        "valid_volume": true,
+        "vertices": 1160,
+        "faces": 2316
+      },
+      "modules": {
+        "coverage_pct": 90.36437246963563,
+        "overshoot_pct": 3.562753036437247,
+        "covered_mm3": 803.5200638580335,
+        "overshoot_mm3": 31.680002517700245,
+        "union_volume_mm3": 835.2000663757337,
+        "overlapping_modules_mm3": 561.6000446319589,
+        "blocks": [
+          {
+            "id": "box-10",
+            "shape": "cuboid",
+            "center_mm": [
+              34.50000137090683,
+              23.700000941753387,
+              31.0
+            ],
+            "orientation": "xyz",
+            "dimensions_mm": [
+              6,
+              8,
+              10
+            ],
+            "minimum_thickness_mm": 6.0
+          },
+          {
+            "id": "box-10",
+            "shape": "cuboid",
+            "center_mm": [
+              34.50000137090683,
+              23.700000941753387,
+              34.0
+            ],
+            "orientation": "xyz",
+            "dimensions_mm": [
+              6,
+              10,
+              8
+            ],
+            "minimum_thickness_mm": 6.0
+          },
+          {
+            "id": "cube-6",
+            "shape": "cuboid",
+            "center_mm": [
+              34.50000137090683,
+              20.850000828504562,
+              28.0
+            ],
+            "orientation": "xyz",
+            "dimensions_mm": [
+              6,
+              6,
+              6
+            ],
+            "minimum_thickness_mm": 6.0
+          },
+          {
+            "id": "cube-6",
+            "shape": "cuboid",
+            "center_mm": [
+              34.50000137090683,
+              26.550001055002213,
+              28.0
+            ],
+            "orientation": "xyz",
+            "dimensions_mm": [
+              6,
+              6,
+              6
+            ],
+            "minimum_thickness_mm": 6.0
+          }
+        ],
+        "rejected_thin": [
+          {
+            "id": "thin-plate",
+            "thickness_mm": 2.0,
+            "reason": "below minimum solid-module thickness"
+          }
+        ],
+        "minimum_thickness_rule_mm": 3.0,
+        "thickness_check": "pass",
+        "fit_quality": "acceptable demo fit",
+        "objective": "greedy new covered voxels minus new overshoot voxels; not a global optimum",
+        "bone_overlap_mm3": 0.0
+      },
+      "defect_mesh_volume_error_pct": 0.8029521198073236
+    },
+    {
+      "case": "thin_defect",
+      "seed": 7,
+      "shape_xyz": [
+        80,
+        80,
+        64
+      ],
+      "spacing_mm": [
+        0.6000000238418579,
+        0.6000000238418579,
+        1.0
+      ],
+      "threshold": 400,
+      "closing_radius_mm": 0.8,
+      "segmentation_dice": 0.9999446014071243,
+      "true_bone_volume_mm3": 19494.001549243956,
+      "segmented_bone_volume_mm3": 19496.161549415618,
+      "bone_volume_error_pct": 0.01108033240997303,
+      "intact_digital_volume_mm3": 19699.20156555179,
+      "analytic_intact_cylinder_volume_mm3": 19905.13105314493,
+      "defect_volume_mm3": 205.20001630783113,
+      "defect_bbox": {
+        "min_index": [
+          53,
+          30,
+          30
+        ],
+        "max_index_exclusive": [
+          63,
+          50,
+          33
+        ],
+        "lower_mm": [
+          31.50000125169754,
+          17.70000070333481,
+          29.5
+        ],
+        "upper_mm": [
+          37.50000149011612,
+          29.700001180171967,
+          32.5
+        ],
+        "size_mm": [
+          6.000000238418579,
+          12.000000476837158,
+          3.0
+        ]
+      },
+      "bone_mesh": {
+        "volume_mm3": 19476.665455666243,
+        "surface_area_mm2": 7751.45036203493,
+        "watertight": true,
+        "valid_volume": true,
+        "vertices": 16456,
+        "faces": 32916
+      },
+      "defect_mesh": {
+        "volume_mm3": 199.86005906104643,
+        "surface_area_mm2": 223.33737820721728,
+        "watertight": true,
+        "valid_volume": true,
+        "vertices": 560,
+        "faces": 1116
+      },
+      "modules": {
+        "coverage_pct": 72.63157894736842,
+        "overshoot_pct": 40.35087719298246,
+        "covered_mm3": 149.04001184463525,
+        "overshoot_mm3": 82.80000658035291,
+        "union_volume_mm3": 231.84001842498816,
+        "overlapping_modules_mm3": 0.0,
+        "blocks": [
+          {
+            "id": "cylinder-6",
+            "shape": "cylinder",
+            "center_mm": [
+              34.50000137090683,
+              23.700000941753387,
+              31.0
+            ],
+            "orientation": "y",
+            "dimensions_mm": [
+              6,
+              8,
+              6
+            ],
+            "minimum_thickness_mm": 6.0
+          }
+        ],
+        "rejected_thin": [
+          {
+            "id": "thin-plate",
+            "thickness_mm": 2.0,
+            "reason": "below minimum solid-module thickness"
+          }
+        ],
+        "minimum_thickness_rule_mm": 3.0,
+        "thickness_check": "pass",
+        "fit_quality": "poor fit",
+        "objective": "greedy new covered voxels minus new overshoot voxels; not a global optimum",
+        "bone_overlap_mm3": 80.64000640869153
+      },
+      "defect_mesh_volume_error_pct": 2.602318139572641
+    }
+  ]
+}

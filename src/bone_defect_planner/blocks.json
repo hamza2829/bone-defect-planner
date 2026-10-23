@@ -1,0 +1,8 @@
+[
+  {"id":"thin-plate","shape":"cuboid","size_mm":[8,8,2]},
+  {"id":"cube-6","shape":"cuboid","size_mm":[6,6,6]},
+  {"id":"box-10","shape":"cuboid","size_mm":[10,8,6]},
+  {"id":"box-14","shape":"cuboid","size_mm":[14,10,8]},
+  {"id":"cylinder-6","shape":"cylinder","diameter_mm":6,"height_mm":8},
+  {"id":"cylinder-10","shape":"cylinder","diameter_mm":10,"height_mm":12}
+]

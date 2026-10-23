@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bone-defect-planner"
+version = "0.1.0"
+description = "Educational voxel and modular block fitting prototype, not medical software"
+requires-python = ">=3.12"
+dependencies = [
+  "numpy==2.5.4", "scipy==1.18.1", "scikit-image==0.26.0",
+  "SimpleITK==2.5.6", "trimesh==5.1.1", "matplotlib==3.11.2"
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1"]
+
+[project.scripts]
+bone-defect-planner = "bone_defect_planner.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+bone_defect_planner = ["blocks.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

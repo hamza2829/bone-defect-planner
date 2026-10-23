@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.pytest-temp*/
+data/downloads/
+data/generated/
+.mplconfig/
+tmp/
+artifacts/public-ct/*.stl
+artifacts/public-ct/*.nii.gz
+artifacts/*.nii.gz
