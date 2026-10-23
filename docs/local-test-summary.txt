@@ -11,4 +11,7 @@ thin_defect: Dice=0.9999, bone volume error=0.01%, coverage=72.63%, overshoot=40
 
 Optional public CT download: 16,366,792 bytes, published SHA256 verified.
 Optional public CT demonstration: executed, no ground-truth accuracy claim.
-GitHub Actions: configured, no remote run confirmed.
+GitHub Actions: successful run 40031257920 at commit 202b86d4995526902755d415df6f12ef608d4649.
+Remote tests: 21 passed, 64 warnings in 4.00 seconds.
+Remote phantom evaluation and artifact upload: succeeded.
+Run URL: https://github.com/hamza2829/bone-defect-planner/actions/runs/40031257920

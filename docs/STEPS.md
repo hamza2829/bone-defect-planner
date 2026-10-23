@@ -91,7 +91,7 @@ The download script verifies the published SHA256. The public demonstration segm
 
 ## 9. Push to your own GitHub repository
 
-This step has not been performed by the local verification. Create an empty GitHub repository named `bone-defect-planner`, then from this project folder run:
+The project is now hosted at [hamza2829/bone-defect-planner](https://github.com/hamza2829/bone-defect-planner). If you are recreating it under another account, create an empty GitHub repository named `bone-defect-planner`, then from this project folder run:
 
 ```powershell
 git init
@@ -110,10 +110,10 @@ Open the GitHub repository > **Actions** > **Tests and phantom evaluation**. The
 
 **Screenshot:** `11-github-actions.png`, showing the real run URL, branch/commit and conclusion. If it fails, keep the failure and repair the cause. A workflow file in the repo does not prove a run passed.
 
-After a real successful run, record its URL and commit in `verification.md` and update README's remote-CI sentence. Do not change the numerical table unless the new measured output differs. Explain any differences rather than replacing failures with expectations.
+The first [verified successful run](https://github.com/hamza2829/bone-defect-planner/actions/runs/40031257920) is recorded in `verification.md`. For later runs, record the new URL, tested commit and conclusion. Do not change the numerical table unless the new measured output differs. Explain any differences rather than replacing failures with expectations.
 
 ## 11. Final portfolio check
 
-Confirm README links resolve, both figures display, results include failures, data attribution remains present and the medical disclaimer is visible. Use the three German CV bullets in README only while they match actual work. The current bullets claim a configured workflow and local tests, not a remotely passed workflow or medical validation.
+Confirm README links resolve, both figures display, results include failures, data attribution remains present and the medical disclaimer is visible. Use the three German CV bullets in README only while they match actual work. The current bullets include locally and remotely passed tests, supported by the recorded GitHub run. They do not claim medical validation.
 
 Store genuine captures under `docs/screenshots/` when you take them. None is required to run the project. Do not add a screenshot to the evidence list until it exists.

@@ -12,12 +12,23 @@ Actually executed locally on Windows with Python 3.12.14:
 
 The regression suite includes an enclosed-cavity test. It verifies that an internal cavity reduces mesh volume instead of increasing it. This catches an earlier normal-winding issue that was fixed before the reported final run.
 
+## Verified GitHub Actions run
+
+- Repository: [hamza2829/bone-defect-planner](https://github.com/hamza2829/bone-defect-planner).
+- Run: [40031257920](https://github.com/hamza2829/bone-defect-planner/actions/runs/40031257920), conclusion **success**.
+- Tested commit: `202b86d4995526902755d415df6f12ef608d4649`.
+- GitHub-hosted Ubuntu runner, Python 3.12. Tests: **21 passed, 64 warnings in 4.00 seconds**.
+- The offline phantom evaluation reproduced the reported rounded metrics for all three cases.
+- Result and figure artifact upload succeeded: [phantom-evaluation](https://github.com/hamza2829/bone-defect-planner/actions/runs/40031257920/artifacts/12535740159).
+- The test job completed in 41 seconds. The optional public CT was not downloaded in CI.
+
+GitHub emitted runner/action deprecation notices. They did not fail this run. Future runs may require action-version or runner updates.
+
 Upstream scikit-image currently emits NumPy deprecation warnings during marching cubes. The final recorded local full test run has 64 warnings and zero failures. They are not suppressed.
 
 Not confirmed:
 
-- A remote GitHub Actions execution, because no destination repository has been supplied yet.
 - Terminal/GitHub screenshots taken by the user. The capture checklist is in STEPS.md.
 - Any diagnosis, patient-specific clinical validation, mechanical simulation, manufactured implant or medical benefit.
 
-The workflow exists at `.github/workflows/tests.yml` and is ready for a GitHub repository. Record a real workflow run URL, commit and conclusion here after it runs. Do not present the local test result as remote CI evidence.
+The workflow is `.github/workflows/tests.yml`. The run above is remote CI evidence for its recorded commit. Later documentation updates do not change that tested implementation.

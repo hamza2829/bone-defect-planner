@@ -2,6 +2,8 @@
 
 A Python learning prototype for threshold segmentation, defect geometry and fitting simple modular blocks. It uses a synthetic bone-like cylinder and an optional public CT sample. It does not train a model.
 
+[GitHub repository](https://github.com/hamza2829/bone-defect-planner) | [Verified CI run](https://github.com/hamza2829/bone-defect-planner/actions/runs/40031257920)
+
 **Medical disclaimer:** This is not medical software. It is not validated for diagnosis, surgery, implant design, manufacturing or treatment planning. The block thickness rule is a geometric demonstration, not a biomechanical simulation or a safety check. Do not use the results to make decisions about a person.
 
 ## Pipeline
@@ -38,7 +40,7 @@ py -3.12 -m venv .venv
 
 On Linux/macOS use `python3.12 -m venv .venv` and `.venv/bin/python` in place of the Windows executable. If a restricted Windows environment blocks pytest's temporary directory, use `-m pytest -q --basetemp .pytest-temp`.
 
-Follow [docs/STEPS.md](docs/STEPS.md) for ordered instructions and screenshot names. Local verification: **21 tests pass**. The GitHub Actions workflow runs tests and the phantom, then uploads outputs. **A remote Actions run is not yet confirmed.** No green CI badge is claimed.
+Follow [docs/STEPS.md](docs/STEPS.md) for ordered instructions and screenshot names. **All 21 tests pass locally and in GitHub Actions.** The [verified remote run](https://github.com/hamza2829/bone-defect-planner/actions/runs/40031257920) also completed the phantom evaluation and uploaded its outputs.
 
 ## Data sources and licenses
 
@@ -111,7 +113,7 @@ Public CT demonstration: the artificial marked defect is 585.77 mm3. The selecte
 
 Twenty-one pytest tests cover anisotropic volume and bounding boxes, half-voxel extents, empty inputs, Dice, physical I/O roundtrip, mesh bounds/watertightness, enclosed cavities, exact module fits, boundary ties, thickness rejection, deterministic union metrics, the three phantom cases and processing an external marked mask. The phantom integration test requires no download.
 
-The local run passed all tests. Upstream scikit-image emits NumPy deprecation warnings; they are recorded, not hidden. [GitHub Actions](.github/workflows/tests.yml) is configured to install the project, run pytest, execute the offline demonstration and upload results/figures. The optional public CT is not downloaded in CI. The workflow has not been run remotely yet. See [verification.md](docs/verification.md) for actual execution scope.
+The local and remote runs passed all tests. Upstream scikit-image emits NumPy deprecation warnings; they are recorded, not hidden. [GitHub Actions](.github/workflows/tests.yml) installs the project, runs pytest, executes the offline demonstration and uploads results/figures. The optional public CT is not downloaded in CI. The [verified run](https://github.com/hamza2829/bone-defect-planner/actions/runs/40031257920) reported 21 passed tests and 64 warnings. See [verification.md](docs/verification.md) for the tested commit and actual execution scope.
 
 ## Limits and what I would change
 
@@ -122,10 +124,10 @@ The local run passed all tests. Upstream scikit-image emits NumPy deprecation wa
 - The minimum solid-module thickness rule does not check residual bone wall thickness or mechanical stability. A real structural study would require validated material parameters, loading, boundary conditions, suitable modeling and expert review. No such simulation is included.
 - Voxel-centre rasterization and marching cubes introduce resolution error. I would test spacing convergence and compare digital and analytical shapes independently.
 - Public CT intensity calibration is not independently verified. The skull example is only a separate I/O and geometry demonstration. It has no reference labels for accuracy metrics.
-- A local passing test run does not mean GitHub Actions passed. Record the workflow URL and conclusion after the first real run. No remote run or fabricated screenshot is presented here.
+- CI verifies the synthetic tests and phantom on a GitHub-hosted Linux runner. It does not validate anatomical correctness or medical use. Screenshots in the capture checklist still need to be taken from the real interfaces.
 
 ## CV bullets, actual work only
 
 - Ich habe einen Python-Lernprototypen mit SimpleITK, scikit-image und trimesh zur Segmentierung, Defektvermessung und STL-Erzeugung implementiert und an synthetischen Volumen sowie einem öffentlichen CT-Beispiel ausgeführt.
 - Ich habe drei Phantomfälle ausgewertet und dabei unter anderem einen Dice-Wert von 0,9361 bei niedrigem Kontrast sowie eine unzureichende Modulpassung mit 72,63 Prozent Abdeckung und 40,35 Prozent Überstand gemessen.
-- Ich habe 21 automatisierte Tests erfolgreich lokal ausgeführt und einen GitHub-Actions-Workflow für Tests, Phantom-Auswertung und Ergebnisartefakte eingerichtet.
+- Ich habe 21 automatisierte Tests erfolgreich lokal und in GitHub Actions ausgeführt sowie die Phantom-Auswertung und den Upload der Ergebnisartefakte im CI-Workflow geprüft.
